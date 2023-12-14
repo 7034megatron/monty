@@ -1,6 +1,6 @@
 #include "monty.h"
 
-void xin(stack_t **stack, char *opcode, int argument, unsigned int line_number)
+void execute_instruction(stack_t **stack, char *opcode, int argument, unsigned int line_number)
 {
 	if (strcmp(opcode, "push") == 0)
 	{
