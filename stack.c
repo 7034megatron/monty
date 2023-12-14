@@ -1,5 +1,9 @@
 #include "monty.h"
-
+/**
+ * push  - opcode and its function
+ * @stack: the opcode
+ * @value: function to handle the opcode
+ */
 void push(stack_t **stack, int value)
 {
 	stack_t *newNode = malloc(sizeof(stack_t));
@@ -18,6 +22,11 @@ void push(stack_t **stack, int value)
 	}
 	*stack = newNode;
 }
+/**
+ * pop - opcode and its function
+ * @stack: the opcode
+ * @line_number: function to handle the opcode
+ */
 void pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp = *stack;
@@ -34,6 +43,11 @@ void pop(stack_t **stack, unsigned int line_number)
 	}
 	free(temp);
 }
+/**
+ * pall - opcode and its function
+ * @stack: the opcode
+ * @line_number: function to handle the opcode
+ */
 void pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current = *stack;
@@ -44,6 +58,11 @@ void pall(stack_t **stack, unsigned int line_number)
 		current = current->next;
 	}
 }
+/**
+ * pint - opcode and its function
+ * @stack: the opcode
+ * @line_number: function to handle the opcode
+ */
 void pint(stack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL)
@@ -53,6 +72,11 @@ void pint(stack_t **stack, unsigned int line_number)
 	}
 	printf("%d\n", (*stack)->n);
 }
+/**
+ * swap - opcode and its function
+ * @stack: the opcode
+ * @line_number: function to handle the opcode
+ */
 void swap(stack_t **stack, unsigned int line_number)
 {
 	int temp = (*stack)->n;
@@ -65,6 +89,11 @@ void swap(stack_t **stack, unsigned int line_number)
 	(*stack)->n = (*stack)->next->n;
 	(*stack)->next->n = temp;
 }
+/**
+ * add - opcode and its function
+ * @stack: the opcode
+ * @line_number: function to handle the opcode
+ */
 void add(stack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL || (*stack)->next == NULL)

@@ -1,5 +1,13 @@
 #include "monty.h"
 
+/**
+ * execute_instruction - function to execute given instructions
+ * @stack : parametre to run the stack
+ * @opcode : given command line arguement
+ * @argument : Takes the arguement of the given command
+ * @line_number : for iteration and calculating the number of lines
+ * Description: function with multiple arguements for executing commands
+ */
 void execute_instruction(stack_t **stack, char *opcode, int argument, unsigned int line_number)
 {
 	if (strcmp(opcode, "push") == 0)
