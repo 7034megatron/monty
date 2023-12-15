@@ -41,7 +41,7 @@ int main(int argc, *char argv[])
 				/* If it's the push opcode, read the argument */
 				if (sscanf(line, "%*s %d", &argument) != 1)
 				{
-					fprintf(stderr, "L%u: missing argument for %s\n", line_number, opcode);
+					fprintf(stderr, "L%u: usage: push integer\n", line_number);
 					exit(EXIT_FAILURE);
 				}
 			}
