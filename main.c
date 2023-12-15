@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	size_t opcode_size = 0;
 	ssize_t read_bytes = 1;
 	stack_t *stack = NULL;
-	unsigned int line_number = 1;
+	unsigned int line_number = 0;
 	char *line = NULL;/* Check if the file was included */
 
 	if (argc < 2)
