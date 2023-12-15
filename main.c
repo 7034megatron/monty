@@ -7,7 +7,7 @@
  * @argc: for the argc arguement
  * @argv: for the argv arguemntn
  */
-int main(int argc, *char argv[])
+int main(int argc, char *argv[])
 {
 	FILE *file;
 	char opcode[10];
